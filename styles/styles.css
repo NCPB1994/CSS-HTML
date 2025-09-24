@@ -1,0 +1,39 @@
+.first_block {
+    display: block;
+    background-color: red;
+    width: 100px;
+    height: 30px;
+}
+.two_block{
+    display: inline;
+    background-color: rgb(2, 1, 1);
+    width: 600px;
+    height: 150px;
+}
+.three_block{
+    display: inline-block;
+    background-color: green;
+    width: 150px;
+    height: 60px;
+}
+.menu {
+    background: #f1f5f9;
+    padding: 10px;
+}
+
+.menu .menu__link {
+    display: inline-block;
+    text-decoration: none;
+    background: #2563ed;
+    color: white;
+    padding: 10px 20px;
+    margin-right: 8px;
+    border-radius: 6px;
+    font-weight: bold;
+
+}
+.red-border{ border: 2px solid red;}
+
+.dashed { border: 2px dashed #22c55e; } 
+.dashed { border: 2px dotted #3d82f6; }
+.dashed { border: 2px double #a855f7; }
