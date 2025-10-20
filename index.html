@@ -88,6 +88,48 @@
       </label>
       <buton class="auth_btn" type="submit">Создать</buton>
      </form>
+     <form action="/send" method="post">
+      <input type="text" name="name" placeholder="Имя" required>
+      <button type="submit">Отправить</button>
+      <button type="reset">Сбросить</button>
+     </form>
+    
+     |<form class="form" action="/send" method="POST">
+      <input 
+          class="form_input"
+          type="text"
+          name="firstName" 
+          value="Слава"
+          placeholder="Введите имя"
+          />
+      <label class="form_option">
+        <input class="form_checkbox" type="checkbox" id="agree" name="agree" value="yes">
+        <span class="form_option-text">Согласен с условиями пользования</span>
+       </label>
+      <button class="form_button form-button--primary" type="submit">
+        <span class="form_button-inco" aria-hidden="true">🚀</span>
+        <span class="form_button-text">Отправить</span>
+      </button>
+      <fieldset class="form_group">
+        <legend class="form_label">Пол</legend>
+        <lebel class="form_option">
+        <input class="form_radio" type="radio" name="gender" value="female">
+        <span class="form_option-text">Мужской</span>
+      </lebel>
+      <label class="form_option">
+        <input class="form_radio" type="radio" name="gender" value="female">
+        <span class="form_option-text">Женский</span>
+      </label>
+      </fieldset>
+     </form>
+     <form class="form" action="/upioad" method="POST" enctype="multipart/form-data">
+      <label class="form_option">
+        <span class="form_option-text">Аватар</span>
+        <input class="form_file" type="file" name="avatar" accept="image/*">
+      </label>
+      <button class="form_button form_button--primary" type="submit">Загрузить</button>
+     </form>
+
     </main>
   </body>
   </html>
