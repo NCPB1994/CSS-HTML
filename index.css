@@ -164,3 +164,15 @@
 .auth_btn:hover {
   background: #1e40af;
 }
+.btn {
+  color: $btn-text-color;
+  boreder: 1px solid;
+  &-primary {
+    background-color: $btn-color-primary;
+    border-color: $btn-color-primary;
+  }
+  &-secondary {
+    background-color: &btn-color-primary;
+    boreder-color: $btn-color-secondary;
+  }
+}
