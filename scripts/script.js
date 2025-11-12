@@ -97,3 +97,45 @@ let isReady = true;
 
 console.log(isReady ? "Заказ готов и можно забирать" : "Заказ не готов к получению");
 
+let i = 5;
+while(i<3) {
+  console.log("Привет");
+}
+
+let num;
+
+do {
+  num = prompt("Введите число:");
+} while (num != 5);
+
+console.log("Правильно! ");
+let  fruits = ["Яблоко","груша","банан"];
+
+for (let fruit of fruits) {
+  console.log(fruit);
+}
+
+let person = {name: "Анна", age: 15, city: "Минск"};
+
+for (let key in person){
+  console.log(key + "+ person[key");
+}
+
+for (let i = 1; i <= 10; i++) {
+  if (i===5) break;
+  console.log(i);
+}
+
+let sum = 0; 
+for (let i = 1; i <= 5; i++) {
+  sum += i;
+}
+console.log(sum); 
+
+for (let i = 1; i <= 10; i++) {
+  console.log(`4 x ${i} = ${4 * i}`);
+}
+
+const word = "банан"; 
+const countA = (word.match(/а/g) || []).length;
+console.log(`Количество букв "а": ${countA}`);
