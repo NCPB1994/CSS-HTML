@@ -139,3 +139,49 @@ for (let i = 1; i <= 10; i++) {
 const word = "банан"; 
 const countA = (word.match(/а/g) || []).length;
 console.log(`Количество букв "а": ${countA}`);
+
+function User(name) {
+  this.name = name;
+}
+
+new User("Anna");
+
+const User = (name) => {
+  this.name = name;
+}
+
+new User("Anna")
+
+const square = x => x * x;
+
+function makeCounter() {
+  let count = 0;
+
+  return function() {
+    count++;
+    console.log(count);
+  };
+}
+
+let counter = makeCounter();
+
+counter(); 
+counter(); 
+
+function makeCounter() {
+  let name = "Nikolay";
+
+  return function() {
+    alert(name);
+  };
+}
+
+let name = "Irina";
+// create a function
+let work = makeCounter();
+work();
+
+function printMyName() {
+  const myName = "Вячеслав"; 
+  console.log(myName);
+}
