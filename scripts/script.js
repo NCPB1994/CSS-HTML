@@ -185,3 +185,409 @@ function printMyName() {
   const myName = "Вячеслав"; 
   console.log(myName);
 }
+
+const toys = [
+  {
+    name: 'Мяч',
+    color: 'красный',
+    year: 2020,
+    count: 3,
+    shape: 'круглая'
+  },
+  {
+    name: 'Кукла',
+    color: 'розовая',
+    year: 2018,
+    count: 2,
+    shape: 'человечек'
+  },
+  {
+    name: 'Пазл',
+    color: 'мультицвет',
+    year: 2021,
+    count: 1,
+    shape: 'прямоугольная'
+  }
+];
+
+//1
+function greet(name) {
+  console.log(`Привет, ${name}!`);
+}
+
+//2
+
+const square = (num) => num * num;
+
+//3
+
+const hello = () => "hi";
+
+//4
+
+function doSomething(callback) {
+  callback();
+}
+doSomething(() => console.log("Что-то делается"));
+
+//5
+
+const arr = ["aaa", "b", "cc"];
+arr.sort((a, b) => a.length - b.length);
+console.log(arr);
+
+//6
+
+function lastLetter(word) {
+  return word.slice(-1);
+}
+
+
+//7
+
+const user = {
+  name: "Alex",
+  showName() {
+    console.log(this.name);
+  }
+};
+
+//8
+
+const user = {
+  name: "Alex",
+  showName: () => {
+    console.log(this.name);
+  }
+};
+
+//9
+
+function makeCounter() {
+  let count = 0;
+  return () => {
+    count++;
+    return count;
+  };
+}
+
+
+const counter = makeCounter();
+console.log(counter()); 
+console.log(counter()); 
+
+//10
+
+function createPiggyBank() {
+  let amount = 0;
+  return {
+    addMoney(sum) {
+      amount += sum;
+    },
+    getAmount() {
+      return amount;
+    }
+  };
+}
+
+const piggyBank = createPiggyBank();
+piggyBank.addMoney(100);
+console.log(piggyBank.getAmount()); 
+
+//Условные конструкции и приведение типов в JavaScript
+
+//1
+
+let age = prompt("Введите ваш возраст:");
+age = Number(age);
+if (age >= 18) {
+  console.log("Доступ разрешён");
+} else {
+  console.log("Доступ запрещён");
+}
+
+//2
+
+let a = 10;
+let b = 7;
+
+if (a > b) {
+  console.log("a больше b");
+} else if (a < b) {
+  console.log("b больше a");
+} else {
+  console.log("Они равны");
+}
+
+//3
+
+let t = prompt("Введите температуру:");
+t = Number(t);
+if (t < 0) {
+  console.log("Мороз");
+} else if (t <= 20) {
+  console.log("Прохладно");
+} else {
+  console.log("Тепло");
+}
+
+//4
+
+let t = prompt("Введите температуру:");
+t = Number(t);
+if (t < 0) {
+  console.log("Мороз");
+} else if (t <= 20) {
+  console.log("Прохладно");
+} else {
+  console.log("Тепло");
+}
+
+//5
+
+let num = prompt("Введите число:");
+num = Number(num);
+if (num % 2 === 0) {
+  console.log("Чётное");
+} else {
+  console.log("Нечётное");
+}
+
+//6
+
+const PASSWORD = "javascript";
+let inputPassword = prompt("Введите пароль:");
+if (inputPassword === PASSWORD) {
+  console.log("Добро пожаловать!");
+} else {
+  console.log("Неверный пароль!");
+}
+
+//7
+
+let score = Number(prompt("Введите результат (0-100):"));
+if (score >= 90) {
+  console.log("Отлично");
+} else if (score >= 75) {
+  console.log("Хорошо");
+} else if (score >= 50) {
+  console.log("Удовлетворительно");
+} else {
+  console.log("Нужно подтянуться");
+}
+
+//8
+
+let hour = Number(prompt("Введите час (0-23):"));
+if (hour >= 0 && hour <= 5) {
+  console.log("Ночь");
+} else if (hour <= 11) {
+  console.log("Утро");
+} else if (hour <= 17) {
+  console.log("День");
+} else {
+  console.log("Вечер");
+}
+
+//9
+
+let hasTicket = true;
+let age = 15;
+if (age >= 16) {
+  if (hasTicket) {
+    console.log("Можно войти");
+  } else {
+    console.log("Купи билет");
+  }
+} else {
+  console.log("Вход только с родителями");
+
+  //10\
+
+  let a = 10;
+let b = 5;
+let operator = "+";
+
+if (operator === "+") {
+  console.log(a + b);
+} else if (operator === "-") {
+  console.log(a - b);
+} else if (operator === "*") {
+  console.log(a * b);
+} else if (operator === "/") {
+  if (b !== 0) {
+    console.log(a / b);
+  } else {
+    console.log("Деление на ноль невозможно");
+  }
+} else {
+  console.log("Неизвестный оператор");
+}
+
+//11
+
+let day = Number(prompt("Введите номер дня (1-7):"));
+switch (day) {
+  case 1:
+    console.log("Понедельник");
+    break;
+  case 2:
+    console.log("Вторник");
+    break;
+  case 3:
+    console.log("Среда");
+    break;
+  case 4:
+    console.log("Четверг");
+    break;
+  case 5:
+    console.log("Пятница");
+    break;
+  case 6:
+    console.log("Суббота");
+    break;
+  case 7:
+    console.log("Воскресенье");
+    break;
+  default:
+    console.log("Некорректный номер дня");
+}
+
+//12
+
+let month = Number(prompt("Введите номер месяца (1-12):"));
+switch (month) {
+  case 12:
+  case 1:
+  case 2:
+    console.log("Зима");
+    break;
+  case 3:
+  case 4:
+  case 5:
+    console.log("Весна");
+    break;
+  case 6:
+  case 7:
+  case 8:
+    console.log("Лето");
+    break;
+  case 9:
+  case 10:
+  case 11:
+    console.log("Осень");
+    break;
+  default:
+    console.log("Некорректный номер месяца");
+}
+
+//13
+
+let drink = "tea";
+switch (drink) {
+  case "tea":
+    console.log("Вы выбрали чай");
+    break;
+  case "coffee":
+    console.log("Вы выбрали кофе");
+    break;
+  case "juice":
+    console.log("Вы выбрали сок");
+    break;
+  default:
+    console.log("Такого напитка нет");
+}
+
+//14
+
+let isLoggedIn = true;
+let role = "user";
+
+if (!isLoggedIn) {
+  console.log("Войдите в систему");
+} else {
+  if (role === "admin") {
+    console.log("Добро пожаловать, админ");
+  } else {
+    console.log("Здравствуйте, пользователь");
+  }
+}
+
+//15
+
+let total = 350;
+let isVIP = true;
+let discount;
+
+if (isVIP) {
+  discount = 0.20;
+} else if (total >= 500) {
+  discount = 0.15;
+} else if (total >= 200) {
+  discount = 0.10;
+} else {
+  discount = 0;
+}
+
+let finalPrice = total - total * discount;
+console.log(`Итоговая цена: ${finalPrice}`);
+
+//16
+
+let input = prompt("Введите число:");
+let num = Number(input);
+if (isNaN(num)) {
+  console.log("Это не число!");
+} else {
+  if (num > 0) {
+    console.log("Положительное");
+  } else if (num < 0) {
+    console.log("Отрицательное");
+  } else {
+    console.log("Ноль");
+  }
+}
+
+//17
+
+console.log("5" == 5);   
+console.log("5" === 5);  
+console.log("5" + 5);    
+console.log("5" - 5);
+
+//18
+
+let age = prompt("Введите возраст:");
+age = Number(age);
+if (age < 18) {
+  console.log("Доступ запрещён");
+} else {
+  console.log("Проходи");
+}
+
+//19
+
+let name = prompt("Введите имя:");
+if (!name) {
+  console.log("Имя не введено");
+} else {
+  console.log(`Привет, ${name}!`);
+}
+
+//20
+
+let isOnline = "false";
+
+if (isOnline) {
+  console.log("Пользователь в сети");
+} else {
+  console.log("Пользователь не в сети");
+}
+
+//21
+
+console.log("10" > 5);    
+console.log("10" < "2");   
+console.log("abc" > 5);    
+console.log(true == 1);    
+console.log(false == 0);   

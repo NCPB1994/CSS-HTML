@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="index.css" />
+      <title>САЙТ N1</title>
+    </head>
+  <body>
+    <header class="header">
+      <h1>site</h1>
+      <nav class="menu">
+        <a class="a-underline">Главная</a>
+        <a class="a-underline">О нас</a>
+        <a class="a-underline">Контакты</a>
+      </nav>
+    </header>
+    <main>
+      <div class="order-conteiner">
+        <div class="item">1</div>
+        <div class="item special">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+      </div>
+      <section class="cards">
+        <article class="card">Карточка 1</article>
+        <article class="card">Карточка 2</article>
+        <article class="card">Карточка 3</article>
+        <article class="card card--big">Карточка 4 (шире)</article>
+        <article class="card">Карточка 5</article>
+      </section>
+      <div class="center-screen">
+        <button class="btn">Нажми меня</button>
+      </div>
+  
+      <div class="grid-conteiner">
+        <div class="grid-item">1</div>
+        <div class="grid-item special">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+      </div>
+
+      <div class="loadge"></div>
+      <div class="ball"></div>
+      <div class="text">dbgnsrsrndyjkedes</div>
+   
+      <button class="animation-botton">Click</button>
+      <div class="fade-in">Привет! Я появился красиво </div>
+      <div class="card">
+        <h3>Заголовок</h3>
+        <p> Немного текста про карточку.</p>
+      </div>
+      <div class="card">
+        <h3>Заголовок</h3>
+        <p> Немного текста про карточку.</p>
+      </div>
+      <div class="grad">Мягкий градиентовый фон</div>
+     <div class="banner"></div>
+     <form action="/search" method="GET">
+      <label for="q">Поиск:</label>
+      <input id="q" name="q" type="text" placeholder="Что ищем?"/>
+      <button type="sumbit">Найти</button>
+     </form>
+     <label for="city">Город</label>
+     <select id="city" name="city">
+      <option value="mns">Минск</option>
+      <option value="blst">Беласток</option>
+      <option value="vln">Вильно</option>
+     </select>
+     <button type="submit">Отправить</button>
+     <button type="submit">Просто кнопка</button>
+     <input name="email" type="email" requred autocomplete="email"/>
+     <fieldset>
+    <legend>Контакты</legend>
+    <label>Имя <input name="name" required></label>
+    <label>Телефон <input name="phone" type="tel"></label>
+     </fieldset>
+     <form class="auth" action="/signup" method="post">
+      <h3 class="auth_title">Регистрация</h3>
+      <label class="auth_label">Имя
+      <input class="auth_input" name="name" type="text" placeholder="Ваше Имя"></input>
+      </label>
+      <label class="auth_label">Emal
+        <input class="auth_input" name="email" type="email" placenolder="you@email.com"></input>
+      </label>
+      <label class="auth_label">Пароль
+        <input class="auth_input" name="password" type="password" placenolder="......"></input>
+      </label>
+      <buton class="auth_btn" type="submit">Создать</buton>
+     </form>
+     <form action="/send" method="post">
+      <input type="text" name="name" placeholder="Имя" required>
+      <button type="submit">Отправить</button>
+      <button type="reset">Сбросить</button>
+     </form>
+    
+     |<form class="form" action="/send" method="POST">
+      <input 
+          class="form_input"
+          type="text"
+          name="firstName" 
+          value="Слава"
+          placeholder="Введите имя"
+          />
+      <label class="form_option">
+        <input class="form_checkbox" type="checkbox" id="agree" name="agree" value="yes">
+        <span class="form_option-text">Согласен с условиями пользования</span>
+       </label>
+      <button class="form_button form-button--primary" type="submit">
+        <span class="form_button-inco" aria-hidden="true">🚀</span>
+        <span class="form_button-text">Отправить</span>
+      </button>
+      <fieldset class="form_group">
+        <legend class="form_label">Пол</legend>
+        <lebel class="form_option">
+        <input class="form_radio" type="radio" name="gender" value="female">
+        <span class="form_option-text">Мужской</span>
+      </lebel>
+      <label class="form_option">
+        <input class="form_radio" type="radio" name="gender" value="female">
+        <span class="form_option-text">Женский</span>
+      </label>
+      </fieldset>
+     </form>
+     <form class="form" action="/upioad" method="POST" enctype="multipart/form-data">
+      <label class="form_option">
+        <span class="form_option-text">Аватар</span>
+        <input class="form_file" type="file" name="avatar" accept="image/*">
+      </label>
+      <button class="form_button form_button--primary" type="submit">Загрузить</button>
+     </form>
+
+    
+
+
+    </main>
+
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
