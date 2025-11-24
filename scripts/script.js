@@ -591,3 +591,98 @@ console.log("10" < "2");
 console.log("abc" > 5);    
 console.log(true == 1);    
 console.log(false == 0);   
+//дз 24.11.2025
+let toys = [
+  { id: 1, name: "Красный шар", type: "ball_red", color: "red", size: "m" },
+  { id: 2, name: "Золотой колокольчик", type: "bell_gold", color: "gold", size: "s" },
+  { id: 3, name: "Зеленая игрушка", type: "toy_green", color: "green", size: "l" },
+  { id: 4, name: "Синяя снежинка", type: "snowflake_blue", color: "blue", size: "m" }
+];
+
+
+let trees = [
+  { id: 1, type: "green", size: "big", description: "Классическая зелёная ёлка" },
+  { id: 2, type: "snowy", size: "medium", description: "Ёлка в снегу" },
+  { id: 3, type: "gold", size: "small", description: "Золотая ёлка" }
+];
+
+
+let garlands = [
+  { id: 1, type: "white", length: "long", mode: "blink" },
+  { id: 2, type: "multi", length: "short", mode: "static" },
+  { id: 3, type: "blue", length: "long", mode: "blink" }
+];
+
+
+console.log("Список игрушек:");
+for (let toy of toys) {
+  console.log(`${toy.name} — ${toy.type}`);
+}
+
+
+let currentTree = {
+  type: "",
+  garland: "",
+  toys: [],
+
+  setTree(newType) {
+    this.type = newType;
+  },
+
+  setGarland(newGarland) {
+    this.garland = newGarland;
+  },
+
+  addToy(toy) {
+    this.toys.push(toy);
+  },
+
+  showInfo() {
+    console.log("=== Информация о ёлке ===");
+    console.log("Тип ёлки:", this.type);
+    console.log("Гирлянда:", this.garland);
+    console.log("Игрушки на ёлке:");
+    this.toys.forEach((toy, index) => {
+      console.log(`${index + 1}. ${toy.name} (${toy.type})`);
+    });
+    console.log(`Всего игрушек: ${this.toys.length}`);
+  },
+
+  removeToy(id) {
+    this.toys = this.toys.filter(toy => toy.id !== id);
+  }
+};
+
+
+currentTree.setTree(trees[0].type);
+
+currentTree.setGarland(garlands[0].type);
+
+currentTree.addToy(toys[0]);
+currentTree.addToy(toys[1]);
+
+currentTree.addToy(toys[2]);
+
+currentTree.showInfo();
+
+
+console.log("Игрушки красного цвета:");
+let redToys = toys.filter(toy => toy.color === "red");
+redToys.forEach(toy => console.log(`${toy.name} — ${toy.type}`));
+
+
+let toyWithId2 = toys.find(toy => toy.id === 2);
+console.log("Игрушка с id=2:", toyWithId2);
+
+
+let treeTypes = new Set(trees.map(tree => tree.type));
+console.log("Все типы ёлок:", Array.from(treeTypes));
+
+
+
+currentTree.removeToy(1);
+console.log("После удаления игрушки с id=1:");
+currentTree.showInfo();
+
+
+console.log("Количество игрушек на ёлке:", currentTree.toys.length);
