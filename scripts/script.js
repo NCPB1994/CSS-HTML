@@ -186,6 +186,7 @@ function printMyName() {
   console.log(myName);
 }
 
+<<<<<<< Updated upstream
 const toys = [
   {
     name: 'Мяч',
@@ -686,3 +687,20 @@ currentTree.showInfo();
 
 
 console.log("Количество игрушек на ёлке:", currentTree.toys.length);
+=======
+const title = document.querySelettor("h1");
+
+const button = document.querySelettorALL(".btn");
+
+const apples = document.querySelettorALL(".apples");
+
+element.classList.add("active");
+
+element.classList.remove("error"); // Удалять класс
+
+element.classList.toggle("open");
+
+element.classList.toggle("on");
+
+ 
+>>>>>>> Stashed changes
