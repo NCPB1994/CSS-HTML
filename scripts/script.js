@@ -704,3 +704,41 @@ element.classList.toggle("on");
 
  
 >>>>>>> Stashed changes
+
+const img = document.createElement("img");
+img.scr = garland.image;
+img.classList.add("garland-on-tree");
+
+img.style.left = (x - 140) + "px";
+img.style.top = (y - 29) + "px";
+
+img.style.animationDelay = (Math.random() *1.6) + "s";
+
+treeArea.appendChild(img);
+
+    let treeData = {
+      type: currentTree.type,
+      garland: currentTree.garland,
+      toys: currentTree.toys
+    };
+
+    function getResultCurrentTreeData() {
+      const resultCurrentTreeData = {
+        type: currentTree.type,
+        garland: currentTree.garland,
+        toys: currentTree.toys.map(toy =>){
+          id : toy.id,
+          x: toy.id,
+          y: toy.x,
+          image: toy.image
+        }))
+      };
+      return resultCurrentTreeData;
+    }
+
+    <div class="buttons">
+      <a class="buttons" id="save-tree-btn">Сохранить</a>
+      <a class="buttons" id="reset-tree-btn">Сбросить</a>
+    </div>
+
+    
