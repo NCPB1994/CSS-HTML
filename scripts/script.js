@@ -741,4 +741,86 @@ treeArea.appendChild(img);
       <a class="buttons" id="reset-tree-btn">Сбросить</a>
     </div>
 
-    
+    class Animal {
+      speak() {
+        console.log("Animal sound"); 
+      }
+    }
+
+   class Cat extends Animal {
+    speak() {
+      console.log("Meow");
+    }
+   }
+
+   const cat = new Cat();
+   cat.speak();
+
+   function Human(firstName, LastName) {
+    this.firstName = firstName
+    this.lastName = lastName
+   }
+
+   const chris = new Human('Chris','Coyier')
+   console.log(chris.firstName)
+   console.log(chris.lastName)
+
+   const zell = new Human('Zell','Liew')
+   console.log(zell.firstName)
+   console.log(zell.lastName)
+
+   class Human {
+    constructor(firstName,LastName) {
+      this.firstName = firstName
+      this.lastName = this.lastName
+    }
+   }
+
+   const Human {
+    init(firstName,LastName) {
+      this.firstName = firstName
+      this.lastName = this.lastName
+    }
+   }
+
+   const chris = objact.create(Human)
+   chris.init('Chris','Coyier')
+
+   console.log(chris.firstName)
+   console.log(chris.lastName)
+
+   function Human(firstName,LastName) {
+    return {
+      firstName,
+      this.lastName
+    }
+   }
+
+   const chris = Human('Chris','Coyier')
+
+   console.log(chris.firstName)
+   console.log(chris.lastName) 
+
+   const some0bject= {
+    some0Methot()
+   }
+
+   function Human (firstName, lastName) {
+    this.firstName = firstName
+    this.lastName = lastName
+
+    this.sayHello = function() {
+      console.log(`Hello', I'm ${firstName}`)
+    }
+   }
+   const chris = new Human('Chris','Coyier')
+   console.log(chris)
+
+   function Human (firstName, lastName) {
+    this.firstName = firstName
+    this.lastName = lastName
+   }
+
+   Human.prototype.sayHello = function() {
+    console.log(`Hello','I'm${this.firstName}`)
+   }
