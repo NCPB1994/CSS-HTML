@@ -102,10 +102,10 @@ while(i<3) {
   console.log("Привет");
 }
 
-let num;
+let nummer;
 
 do {
-  num = prompt("Введите число:");
+  number = prompt("Введите число:");
 } while (num != 5);
 
 console.log("Правильно! ");
@@ -146,13 +146,13 @@ function User(name) {
 
 new User("Anna");
 
-const User = (name) => {
-  this.name = name;
-}
+// const User = (name) => {
+//   this.name = name;
+// }
 
 new User("Anna")
 
-const square = x => x * x;
+const squaree = x => x * x;
 
 function makeCounter() {
   let count = 0;
@@ -163,10 +163,10 @@ function makeCounter() {
   };
 }
 
-let counter = makeCounter();
+let counterr = makeCounter();
 
-counter(); 
-counter(); 
+counterr(); 
+counterr(); 
 
 function makeCounter() {
   let name = "Nikolay";
@@ -186,7 +186,6 @@ function printMyName() {
   console.log(myName);
 }
 
-<<<<<<< Updated upstream
 const toys = [
   {
     name: 'Мяч',
@@ -255,7 +254,7 @@ const user = {
 
 //8
 
-const user = {
+const User = {
   name: "Alex",
   showName: () => {
     console.log(this.name);
@@ -687,7 +686,6 @@ currentTree.showInfo();
 
 
 console.log("Количество игрушек на ёлке:", currentTree.toys.length);
-=======
 const title = document.querySelettor("h1");
 
 const button = document.querySelettorALL(".btn");
@@ -703,7 +701,6 @@ element.classList.toggle("open");
 element.classList.toggle("on");
 
  
->>>>>>> Stashed changes
 
 const img = document.createElement("img");
 img.scr = garland.image;
@@ -761,9 +758,9 @@ treeArea.appendChild(img);
     this.lastName = lastName
    }
 
-   const chris = new Human('Chris','Coyier')
-   console.log(chris.firstName)
-   console.log(chris.lastName)
+   const chriss = new Human('Chris','Coyier')
+   console.log(chriss.firstName)
+   console.log(chriss.lastName)
 
    const zell = new Human('Zell','Liew')
    console.log(zell.firstName)
@@ -783,20 +780,20 @@ treeArea.appendChild(img);
     }
    }
 
-   const chris = objact.create(Human)
+   const chrris = objact.create(Human)
    chris.init('Chris','Coyier')
 
-   console.log(chris.firstName)
-   console.log(chris.lastName)
+   console.log(chrris.firstName)
+   console.log(chrris.lastName)
 
    function Human(firstName,LastName) {
     return {
-      firstName,
-      this.lastName
+     firstName,
+    LastName
     }
    }
 
-   const chris = Human('Chris','Coyier')
+  //  const chris = Human('Chris','Coyier')
 
    console.log(chris.firstName)
    console.log(chris.lastName) 
@@ -824,3 +821,25 @@ treeArea.appendChild(img);
    Human.prototype.sayHello = function() {
     console.log(`Hello','I'm${this.firstName}`)
    }
+
+   class Notification {
+    send() {
+      console.log("Notification")
+    }
+
+   }
+;
+   const notification = new Notification();
+   notification.send();
+
+localStorage.setItem("theme","dark");
+const theme = localStorage.getItem("them");
+localStorage.clear();
+sessionStorage.setItem("step","2");
+const step = sessionStorage.getItem("step");
+if (localStorage.getItem(:theme)) {
+  console.log("Theme exists");
+}
+const data = {level: 3 };
+localStorage.setItem("game",JSON.stringify(data));
+const game = JSON.parse(localStorage.getItem("game"));
